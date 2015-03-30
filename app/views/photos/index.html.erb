@@ -1,0 +1,7 @@
+<h1>All Photos</h1>
+
+<p>
+	<strong><%= link_to "Upload a new Photo", new_photo_path %></strong>
+</p>
+
+<%= simple_table_for @photos, with: PhotosTable %>
