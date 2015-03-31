@@ -17,6 +17,21 @@ class PhotosController < ApplicationController
   	end
   end
 
+  def edit
+  	@photo = Photo.find(params[:id])
+  end
+
+  def update
+  	#have to retrieve data from databse to update
+  	@photo = Photo.find(params[:id])
+
+  	if @photo.update_attributes(photo_params) #if photo able to update these attributes
+  		redirect_to photos_path
+  	else
+  		render :edit
+  	end
+  end
+
   private
 
   def photo_params
