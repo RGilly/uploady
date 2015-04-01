@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'table_cloth'
 
+gem 'simple_form','~> 3.1.0'
+
+# the arrow tells you what version of the gem you are using and if it changes then hosed. You can lock it in. 
+
 gem 'carrierwave'
 
 gem 'twitter-bootstrap-rails'

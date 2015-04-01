@@ -1,12 +1,9 @@
-<h1>Photos#new</h1>
-<p>Find me in app/views/photos/new.html.erb</p>
-
-<%= form_for @photo do |form| %>
-	<%= form.label :filename %>
-	<%= form.file_field :filename %><br />
-
-	<%= form.label :caption %>
-	<%= form.text_area :caption %><br />
-
-	<%= form.submit 'Upload File' %>
+<div class="row">
+	<div class="col-md-5">
+<%= simple_form_for @photo, html: { class: 'form-horizontal'} do |form| %>
+	<%= form.input :filename, label: 'Photo File' %>
+	<%= form.input :caption %>
+	<%= form.submit  'Upload Photo', class: 'btn btn-primary'%>
 <% end %>
+	</div>
+</div>

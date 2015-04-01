@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
   	#@photo = Photo.new(photo_params)
   	#@photo.user = current_user
 
-  	@photo = current.user.photos.build(photo_params) 
+  	@photo = current_user.photos.build(photo_params) 
 
   	#this is an alternate way that is commonly used in production
 
